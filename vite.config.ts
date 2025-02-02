@@ -3,13 +3,16 @@ import react from '@vitejs/plugin-react';
 import viteCompression from 'vite-plugin-compression';
 
 // https://vitejs.dev/config/
-export default defineConfig(({ command, mode }) => {
+export default defineConfig(() => {
   return {
     plugins: [
       react(),
       viteCompression()
     ],
     assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg', '**/*.gif'],
-    base: './'
+    base: './',
+    build: {
+      outDir: '../',
+    }
   }
 });
