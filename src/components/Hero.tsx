@@ -1,6 +1,6 @@
 export function Hero() {
   return (
-    <section className="relative bg-gray-900 text-white pt-24 pb-32">
+    <section id="top" className="relative bg-gray-900 text-white pt-24 pb-32">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-purple-900 opacity-90" />
         <img
