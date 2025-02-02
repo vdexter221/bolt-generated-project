@@ -12,6 +12,15 @@ export default defineConfig(() => {
     assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg', '**/*.gif'],
     base: './',
     build: {
+      outDir: '.',
+      emptyOutDir: false,
+      rollupOptions: {
+        output: {
+          assetFileNames: 'assets/[name].[ext]',
+          entryFileNames: 'assets/[name].js',
+          chunkFileNames: 'assets/[name].js'
+        }
+      }
     }
   }
 });
